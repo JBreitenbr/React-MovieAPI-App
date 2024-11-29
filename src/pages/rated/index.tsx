@@ -10,7 +10,7 @@ enum DisplayType{
 }
 export const Rated = () => {
   const [activeTabs,setActiveTabs]=useState<DisplayType>(DisplayType.Movies)
-  const [displayType,setDisplayType]=useState(DisplayType.TvShows)
+  const [displayType,setDisplayType]=useState(DisplayType.Movies)
 const {data:ratedMovies,isLoading:isLoadingMovies} = useQuery({queryKey:["ratedMovies"],queryFn:fetchRatedMovies})
 
 const {data:ratedTvShows,isLoading:isLoadingTvShows} = useQuery({queryKey:["ratedTvShows"],queryFn:fetchRatedTvShows})
